@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.ohoussein.playpause.PlayPauseView
+        android:id="@+id/showPlaylist"
+        android:layout_width="185dp"
+        android:layout_height="97dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="44dp"
+        android:clickable="true"
+        android:foreground="@android:drawable/ic_menu_sort_by_size"
+        android:onClick="showPlaylist"
+        app:fill_color="#00a2ed"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/play_pause_view"
+        app:play_bg="#00a2ed" />
+
+    <com.ohoussein.playpause.PlayPauseView
+        android:id="@+id/play_pause_view"
+        android:layout_width="wrap_content"
+        android:layout_height="97dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="44dp"
+        android:clickable="true"
+        android:foreground="?android:selectableItemBackground"
+        app:fill_color="#e1e1e1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:pause_bg="#00a2ed"
+        app:play_bg="#001eff" />
+
+    <com.ohoussein.playpause.PlayPauseView
+        android:id="@+id/stopView"
+        android:layout_width="185dp"
+        android:layout_height="97dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="44dp"
+        android:clickable="true"
+        android:foreground="@android:drawable/ic_menu_delete"
+        android:onClick="stopRecording"
+        app:fill_color="#00a2ed"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/play_pause_view"
+        app:play_bg="#00a2ed" />
+
+
+</android.support.constraint.ConstraintLayout>
